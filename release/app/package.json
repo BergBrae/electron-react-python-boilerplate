@@ -1,0 +1,17 @@
+{
+  "name": "MyApplication",
+  "version": "1.1.0",
+  "description": "Boilerplate code for electron react applications with python",
+  "license": "MIT",
+  "author": {
+    "name": "Brady Berg",
+    "email": "bradyberg0@gmail.com"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
